@@ -1,0 +1,76 @@
+{
+    "info": {
+        "name": "Patent Analytics API",
+        "description": "Test collection for summary, query, and correlation endpoints",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get Summary",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8000/api/summary",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "summary"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Query Results",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8000/api/query?patent_year=2020&assignee=OpenAI",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "query"
+                    ],
+                    "query": [
+                        {
+                            "key": "patent_year",
+                            "value": "2020"
+                        },
+                        {
+                            "key": "assignee",
+                            "value": "OpenAI"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Run Correlation Analysis",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8000/api/correlation",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "correlation"
+                    ]
+                }
+            }
+        }
+    ]
+}

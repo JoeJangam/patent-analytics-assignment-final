@@ -1,0 +1,5 @@
+patent_number,title,assignee,inventor,publication_date,technology_area,patent_type,country,abstract
+US1234567A,AI recognition system,OpenAI,Sam Altman,2020-05-12,Artificial Intelligence,Utility,US,An AI system for recognizing visual input.
+US9876543B,ML diagnostics,DeepMind,Jane Doe,2021-07-25,Artificial Intelligence,Utility,UK,Machine learning for clinical diagnosis optimization.
+US2345678C,AI document parser,Meta,Mark Zuckerberg,2019-08-14,Artificial Intelligence,Utility,US,NLP-based system for parsing structured documents.
+US3456789D,AI image enhancer,Google,Jeff Dean,2022-01-30,Artificial Intelligence,Utility,US,A neural network for enhancing image quality.
