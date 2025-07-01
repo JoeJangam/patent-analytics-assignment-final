@@ -55,10 +55,16 @@ docker-compose exec app php artisan key:generate
 
    ```bash
    git clone https://github.com/JoeJangam/patent-analytics-assignment-final.git
-   cd temp-laravel
+   cd patent-analytics-assignment-final
+
+Softwares to be installed:
+https://www.python.org/downloads/
+https://getcomposer.org/download/ ( Click on Composer-Setup.exe for windows )
+https://www.docker.com/products/docker-desktop/ (Click on Download Docker Desktop)
 
 ## Docker Execution
 
+Docker name "laravel_app"
 docker-compose up -d
 docker exec -it laravel_app bash
 docker exec -it laravel_app python3 --version
