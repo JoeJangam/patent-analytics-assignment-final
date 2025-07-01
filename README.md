@@ -59,12 +59,14 @@ docker-compose exec app php artisan key:generate
 
 Softwares to be installed:
 https://www.python.org/downloads/
-https://getcomposer.org/download/ ( Click on Composer-Setup.exe for windows )
 https://www.docker.com/products/docker-desktop/ (Click on Download Docker Desktop)
+Once Installed,restart the system
 
-## Docker Execution
+Commands:
+create .env file and copy .env.example to .env file
 
-Docker name "laravel_app"
+## Docker Execution (Docker name "laravel_app")
+
 docker-compose up -d
 docker exec -it laravel_app bash
 docker exec -it laravel_app python3 --version
