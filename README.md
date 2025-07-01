@@ -38,17 +38,6 @@ This project provides a RESTful API for analyzing a patent dataset, including st
 - Docker & Docker Compose
 - Postman (for API testing)
 
-
-### Prerequisites
-
-- Docker
-- Docker Compose
-
-##  Docker Setup
-```bash
-docker-compose up --build
-docker-compose exec app php artisan key:generate
-
 ## Steps to Run
 
 1. **Clone the repository**:
@@ -57,22 +46,41 @@ docker-compose exec app php artisan key:generate
    git clone https://github.com/JoeJangam/patent-analytics-assignment-final.git
    cd patent-analytics-assignment-final
 
-Softwares to be installed:
+**Softwares to be installed:**
 https://www.python.org/downloads/
 https://www.docker.com/products/docker-desktop/ (Click on Download Docker Desktop)
 Once Installed,restart the system
-
-Commands:
-create .env file and copy .env.example to .env file
+Create .env file and copy .env.example to .env file
 
 ## Docker Execution (Docker name "laravel_app")
+Make sure you are in the right folder
+cd patent-analytics-assignment-final and run the following commands:
+docker --version
+docker compose run --rm app bash
+You will redirected to inside the container like this (root@3e0fbaa21d3a:/var/www# )
+Now run command : composer install
 
-docker-compose up -d
-docker exec -it laravel_app bash
+ laravel/pail ................................................................................................................................ DONE
+  laravel/sail ................................................................................................................................ DONE   
+  laravel/tinker .............................................................................................................................. DONE   
+  nesbot/carbon ............................................................................................................................... DONE   
+  nunomaduro/collision ........................................................................................................................ DONE   
+  nunomaduro/termwind ......................................................................................................................... DONE  
+  
+Once it is done, run command **exit**
+Come out of the container, run the below command
+docker compose up -d
+docker compose exec app php artisan migrate
 docker exec -it laravel_app python3 --version
 docker exec -it laravel_app pip3 install sqlalchemy psycopg2-binary --break-system-packages
 docker exec -it laravel_app python3 load_patents.py
+docker exec -it laravel_app bash
 
+Open the broswer and validate the API's
+1. http://localhost:8000/api/summary
+2. http://localhost:8000/api/correlation
+3. http://localhost:8000/api/query?patent_year=2020&assignee=OpenAI
+   
 ## Postman Collection
 Import the included Postman collection to test all endpoints:
 
